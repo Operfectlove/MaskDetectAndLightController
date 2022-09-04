@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
-
+import requests
+from time import sleep
 offMask = True
 # 찾고자하는 것의 cascade classifier 를 등록
 # 경로는 상대경로로 바뀔 수 있음
@@ -34,8 +35,10 @@ def detect(gray, frame):
         # 코: 이미지 프레임에 (x,y)에서 시작, (x+넓이, y+길이)까지의 사각형을 그림(색 0 255 0 , 굵기 2)
         for (ex, ey, ew, eh) in nose:
             cv2.rectangle(face_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
-            #serial.println()
-            #차라리 이부분이 작동될때 serial로 바로 데이터 전송하는게 나을거 같은데,...
+            dd = requests.get("http://172.20.10.4")
+            sleep(1)
+            continue
+
     return frame
 
 
@@ -50,6 +53,7 @@ while True:
 
     # 만들어준 얼굴 코 찾기
     canvas = detect(gray, frame)
+
     # 찾은 이미지 보여주기
     cv2.imshow("haha", canvas)
 
