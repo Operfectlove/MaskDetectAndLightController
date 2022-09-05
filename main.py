@@ -8,7 +8,7 @@ offMask = True
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 noseCascade = cv2.CascadeClassifier('haarcascade_mcs_nose.xml')
 
-"""2022.09.03 ~ 2022.09.04"""
+""" 2022.09.03 ~ 2022.09.04 """
 """ 
     def = haar를 이용 얼굴과 코을 찾는 함수
     input = 그레이 스케일 이미지
