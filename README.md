@@ -1,3 +1,3 @@
 # MaskDetectAndLightController
 
-we used "WEMOS D1 mini esp8266 board"
+we used "WEMOS D1 mini ESP8266 board"
