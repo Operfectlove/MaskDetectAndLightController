@@ -1,3 +1,3 @@
-# mask_detect_and_light_controller
+# MaskDetectAndLightController
 
 we used "wemos d1 mini esp8266 board"
