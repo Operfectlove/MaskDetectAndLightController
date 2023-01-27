@@ -36,7 +36,7 @@ def detect(gray, frame):
         # 코: 이미지 프레임에 (x,y)에서 시작, (x+넓이, y+길이)까지의 사각형을 그림(색 0 255 0 , 굵기 2)
         for (ex, ey, ew, eh) in nose:
             cv2.rectangle(face_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
-            dd = requests.get("http://172.20.10.4")
+            #dd = requests.get("http://172.20.10.4")
             sleep(1)
             continue
 
@@ -44,7 +44,7 @@ def detect(gray, frame):
 
 
 # 웹캠에서 이미지 가져오기
-video_capture = cv2.VideoCapture(1)
+video_capture = cv2.VideoCapture(0)
 
 while True:
     # 웹캠 이미지를 프레임으로 자름
